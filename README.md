@@ -4,7 +4,30 @@ Inventory and checkout for a small team (IT closet, lab, office equipment).
 
 People take items off the shelf, they are due back on a date, and returning them puts stock back. **Admin** manages the catalog. **Staff** checks items in and out. The shelf quantity is the source of truth: you cannot check out more than is on hand.
 
-Built as a Java full-stack portfolio project (Spring Boot + Thymeleaf).
+Java full-stack portfolio project (Spring Boot + Thymeleaf).  
+Repo: [github.com/cedrou1001-here/stockroom](https://github.com/cedrou1001-here/stockroom)
+
+## Screenshots
+
+Login:
+
+![Login](docs/screenshots/login.png)
+
+Home (staff):
+
+![Home dashboard](docs/screenshots/home.png)
+
+Items:
+
+![Items](docs/screenshots/items.png)
+
+Open checkouts:
+
+![Checkouts](docs/screenshots/checkouts.png)
+
+Trying to check out more than is on the shelf:
+
+![Oversell error](docs/screenshots/oversell.png)
 
 ## Demo logins
 
@@ -19,11 +42,10 @@ Demo-only accounts. Do not reuse these passwords on a real public site.
 
 ## Run it (Windows)
 
-This project expects **Java 21**. On this machine the default `java` command may still be Java 8, so use the script (it points at Amazon Corretto 21):
+Needs **Java 21**. From the project folder:
 
 ```powershell
-cd path\to\stockroom
-.\run.ps1
+.\mvnw.cmd spring-boot:run
 ```
 
 Wait until the log says `Started StockRoomApplication`, then open [http://localhost:8080](http://localhost:8080).
@@ -31,6 +53,8 @@ Wait until the log says `Started StockRoomApplication`, then open [http://localh
 Stop the app with **Ctrl+C** in that terminal.
 
 You do not need to install Maven. `mvnw.cmd` (the Maven Wrapper) downloads it.
+
+If `.\run.ps1` fails with “running scripts is disabled,” use `mvnw.cmd` as above.
 
 Tests:
 
@@ -77,7 +101,3 @@ Database today is **H2** (a file under `data/`). That is enough to learn and dem
 - Email reminders for overdue loans
 - Audit log of who changed stock
 - A REST API if a React UI were added later
-
-## GitHub later
-
-A **repository** is this project folder plus its history (commits). GitHub is a website that hosts that folder so others can see it. The README is the first page people read when they open the repo. This file is that page, even before anything is uploaded.
