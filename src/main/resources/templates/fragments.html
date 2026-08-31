@@ -1,0 +1,14 @@
+<nav th:fragment="topbar" class="navbar navbar-dark bg-dark" xmlns:th="http://www.thymeleaf.org"
+     xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/}">StockRoom</a>
+        <div class="d-flex align-items-center gap-3">
+            <a class="link-light text-decoration-none" th:href="@{/items}">Items</a>
+            <a class="link-light text-decoration-none" th:href="@{/checkouts}">Checkouts</a>
+            <span class="text-white-50 small" sec:authentication="name">user</span>
+            <form th:action="@{/logout}" method="post" class="mb-0">
+                <button type="submit" class="btn btn-sm btn-outline-light">Log out</button>
+            </form>
+        </div>
+    </div>
+</nav>
