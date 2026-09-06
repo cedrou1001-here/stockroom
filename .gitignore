@@ -1,6 +1,7 @@
 HELP.md
 target/
-data/
+# H2 database files (project root only). Do not ignore src/.../data/ Java packages.
+/data/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
