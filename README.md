@@ -62,6 +62,8 @@ Tests:
 .\mvnw.cmd test
 ```
 
+GitHub also runs these tests on every push (see `.github/workflows/ci.yml`).
+
 ## What to click (2-minute walkthrough)
 
 1. Log in as `staff`.
